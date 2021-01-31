@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradusnik</title>
+</head>
+
+<body>
+    <script>
+        var Tc;
+        Tc = prompt("Введите градусы по Цельсию:");
+        if (Tc == parseFloat(Tc)) {
+            var TF = (9 / 5) * parseFloat(Tc) + 32;
+            alert("Градусов по Фаренгейту: " + TF)
+        } else {
+            alert("Введите число");
+        }
+    </script>
+
+</body>
+
+</html>
