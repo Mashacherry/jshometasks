@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+</head>
+<body>
+	<script>
+		// task 1
+
+let num = 1;
+while (num <= 100) {
+    let flag = false;
+    let divizor = 2;
+    while (divizor <= Math.sqrt(num)) {
+        if (num % divizor == 0) {
+            flag = true;
+            break;
+        }
+        divizor++;
+    }
+    if (!flag) {
+        console.log(num)
+    }
+    num++;
+}
+
+// task 2
+
+let basket = [];
+
+var part1 = ["beautiful", "great", "green", "perfect", "cool", "yummy", "yellow", "neat", "chilly"]
+var part2 = ["apple", "orange", "house", "teacher", "lake", "phone", "olive", "cookie", "tea", "prize"]
+
+function rand_item(items) {
+    return items[Math.floor(Math.random() * items.length)]
+}
+
+for (let i = 0; i < 100; i++) { // this part is random filling of the basket
+    let name = rand_item(part1) + " " + rand_item(part2);
+    let price = Math.random() * 100;
+    basket.push([name, price]);
+}
+
+console.log(basket);
+
+function countBasketPrice(basket) {
+    let countPrice = 0
+    for (let i = 0; i < basket.length; i++) {
+        countPrice += basket[i][1];
+    }
+    return countPrice;
+}
+
+console.log(basket, countBasketPrice(basket));
+
+// task 3
+
+for (let i = 0; i < 10; console.log(i++)) {}
+
+// task 4
+
+for (let i = 1; i <= 20; i++) {
+    console.log("x".repeat(i))
+}
+	</script>
+</body>
+</html>
